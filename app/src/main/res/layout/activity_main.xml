@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="400dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/s1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"></ImageView>
+        <ImageView
+            android:id="@+id/s2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/s1"
+            android:background="@color/white"></ImageView>
+        <ImageView
+            android:id="@+id/s3"
+            android:layout_below="@+id/s1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"></ImageView>
+        <ImageView
+            android:id="@+id/s4"
+            android:layout_below="@id/s2"
+            android:layout_toRightOf="@id/s3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"></ImageView>
+        <ImageView
+            android:id="@+id/s5"
+            android:layout_below="@id/s3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"></ImageView>
+        <ImageView
+            android:layout_below="@id/s4"
+            android:layout_toRightOf="@id/s5"
+            android:id="@+id/s6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"></ImageView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
