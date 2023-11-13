@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProjectGitM8</string>
+    <string name="btn1Text">Button 1</string>
+    <string name="btn2Text">Button 2</string>
+    <string name="btn3Text">Button 3</string>
+    <string name="btn4Text">Button 4</string>
+    <string name="btn5Text">Button 5</string>
+    <string name="btn6Text">Button 6</string>
 </resources>
