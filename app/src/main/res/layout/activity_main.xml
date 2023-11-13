@@ -19,6 +19,7 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn1Text"
+                android:src="@drawable/restaurant"
                 />
             <ImageButton
                 android:layout_width="wrap_content"
@@ -27,6 +28,7 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn2Text"
+                android:src="@drawable/business"
                 />
         </TableRow>
         <TableRow
@@ -40,6 +42,7 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn3Text"
+                android:src="@drawable/hotel"
                 />
             <ImageButton
                 android:layout_width="wrap_content"
@@ -48,7 +51,7 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn4Text"
-                />
+                android:src="@drawable/weather"/>
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -61,7 +64,7 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn5Text"
-                />
+                android:src="@drawable/movie"/>
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -69,6 +72,6 @@
                 android:background="#000"
                 android:layout_margin="10dp"
                 android:contentDescription="@string/btn6Text"
-                />
+                android:src="@drawable/parking"/>
         </TableRow>
 </TableLayout>
