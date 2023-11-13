@@ -1,56 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:gravity="center">
-
-    <RelativeLayout
-        android:layout_width="200dp"
-        android:layout_height="400dp"
-        android:background="@color/black">
-
-        <ImageView
-            android:id="@+id/s1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/white"></ImageView>
-        <ImageView
-            android:id="@+id/s2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_toRightOf="@+id/s1"
-            android:background="@color/white"></ImageView>
-        <ImageView
-            android:id="@+id/s3"
-            android:layout_below="@+id/s1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/white"></ImageView>
-        <ImageView
-            android:id="@+id/s4"
-            android:layout_below="@id/s2"
-            android:layout_toRightOf="@id/s3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/white"></ImageView>
-        <ImageView
-            android:id="@+id/s5"
-            android:layout_below="@id/s3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/white"></ImageView>
-        <ImageView
-            android:layout_below="@id/s4"
-            android:layout_toRightOf="@id/s5"
-            android:id="@+id/s6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/white"></ImageView>
-
-    </RelativeLayout>
-
-
-</LinearLayout>
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    tools:context="com.example.projectgitm8.MainActivity"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"
+                ></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"></Button>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"></Button>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"></Button>
+        </TableRow>
+</TableLayout>
