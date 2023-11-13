@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="450dp"
-    tools:context="com.example.projectgitm8.MainActivity"
+    tools:context=".MainActivity"
     android:gravity="center"
     android:layout_gravity="center"
     android:orientation="vertical">
@@ -12,53 +12,63 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#000"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/btn1Text"
                 />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#000"
-                android:layout_margin="10dp"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#000"
                 android:layout_margin="10dp"
-                ></Button>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#000"
-                android:layout_margin="10dp"></Button>
+                android:contentDescription="@string/btn2Text"
+                />
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1">
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#000"
-                android:layout_margin="10dp"></Button>
-            <Button
+                android:layout_margin="10dp"
+                android:contentDescription="@string/btn3Text"
+                />
+            <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#000"
-                android:layout_margin="10dp"></Button>
+                android:layout_margin="10dp"
+                android:contentDescription="@string/btn4Text"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/btn5Text"
+                />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/btn6Text"
+                />
         </TableRow>
 </TableLayout>
