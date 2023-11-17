@@ -6,4 +6,10 @@
     <string name="btn4Text">Button 4</string>
     <string name="btn5Text">Button 5</string>
     <string name="btn6Text">Button 6</string>
+    <string name="restaurantText">Restaurants page</string>
+    <string name="businessText">Businesses page</string>
+    <string name="hotelText">Hotels page</string>
+    <string name="weatherText">Weather page</string>
+    <string name="movieText">Movies page</string>
+    <string name="parkingText">Parkings page</string>
 </resources>

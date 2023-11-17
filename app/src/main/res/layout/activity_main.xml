@@ -13,6 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <ImageButton
+                android:id="@+id/restaurants"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -22,6 +23,7 @@
                 android:src="@drawable/restaurant"
                 />
             <ImageButton
+                android:id="@+id/businesses"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -36,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <ImageButton
+                android:id="@+id/hotels"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -45,6 +48,7 @@
                 android:src="@drawable/hotel"
                 />
             <ImageButton
+                android:id="@+id/weather"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -58,6 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <ImageButton
+                android:id="@+id/movies"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -66,6 +71,7 @@
                 android:contentDescription="@string/btn5Text"
                 android:src="@drawable/movie"/>
             <ImageButton
+                android:id="@+id/parkings"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
