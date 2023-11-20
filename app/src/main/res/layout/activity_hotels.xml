@@ -3,10 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Hotels">
+    android:orientation="vertical"
+    tools:context=".Hotels"
+    android:gravity="top"
+    android:padding="20dp">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/hotelText"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/hotelCategoriaText"
+            android:layout_marginEnd="10dp"/>
+
+        <Spinner
+            android:id="@+id/categories"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/hotelList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
 </LinearLayout>

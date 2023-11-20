@@ -8,8 +8,23 @@
     <string name="btn6Text">Button 6</string>
     <string name="restaurantText">Restaurants page</string>
     <string name="businessText">Businesses page</string>
-    <string name="hotelText">Hotels page</string>
+    <string name="hotelText">Hotels</string>
     <string name="weatherText">Weather page</string>
     <string name="movieText">Movies page</string>
     <string name="parkingText">Parkings page</string>
+    <string name="settingsText">App settings</string>
+    <string name="hotelCategoriaText">"Categoria de l'hotel: "</string>
+    <string-array name="hotelCategories">
+        <item>1 estrella</item>
+        <item>2 estrelles</item>
+        <item>3 estrelles</item>
+        <item>4 estrelles</item>
+        <item>5 estrelles</item>
+    </string-array>
+    <string-array name="hotelList">
+        <item>Hotel 1</item>
+        <item>Hotel 2</item>
+        <item>Hotel 3</item>
+        <item>Hotel 4</item>
+    </string-array>
 </resources>
