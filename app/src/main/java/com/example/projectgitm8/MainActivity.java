@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     ImageButton btnRestaurants,
                 btnBusinesses,
                 btnHotels,
