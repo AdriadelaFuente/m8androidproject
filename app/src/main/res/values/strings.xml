@@ -30,4 +30,12 @@
     <string name="menuConfig1">Color de fons</string>
     <string name="menuConfig2">Mida de la lletra</string>
     <string name="menuConfig3">Color de la lletra</string>
+    
+    <string-array name="restaurantCategories">
+        <item>Italià</item>
+        <item>Japonès</item>
+        <item>Vegetarià</item>
+        <item>Marisc</item>
+        <item>Hamburgueseria</item>
+    </string-array>
 </resources>
