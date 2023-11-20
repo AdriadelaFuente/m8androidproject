@@ -12,7 +12,7 @@
     <string name="weatherText">Weather</string>
     <string name="movieText">Movies</string>
     <string name="parkingText">Parkings</string>
-    <string name="settingsText">App settings</string>
+    <string name="settingsText">Settings</string>
     <string name="hotelCategoriaText">"Categoria de l'hotel: "</string>
     <string-array name="hotelCategories">
         <item>1 estrella</item>
