@@ -7,7 +7,6 @@
     android:orientation="vertical"
     >
     <Toolbar
-
         android:id="@+id/toolBar"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -17,17 +16,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Restaurants"
-            android:textSize="45dp"
+            android:text="@string/restaurantText"
+            android:textSize="45sp"
             android:textColor="@color/white"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:paddingEnd="80dp"
             />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/restaurant">
-        </ImageView>
+            android:src="@drawable/restaurant"
+            android:contentDescription="@string/restaurantText"/>
 
     </Toolbar>
 
@@ -39,15 +38,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Categories de restaurants"
-            android:textSize="25dp"
-            android:paddingEnd="30dp"/>
+            android:text="@string/categoriesRestaurantsText"
+            android:textSize="21sp"
+            android:paddingEnd="30dp"
+            android:layout_weight="0"
+            tools:ignore="RtlSymmetry" />
+
         <Spinner
-            android:layout_width="120dp"
-            android:layout_height="40dp"
             android:id="@+id/rSpinner"
-            >
-        </Spinner>
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
 
     </LinearLayout>
 

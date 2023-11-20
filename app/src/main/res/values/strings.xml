@@ -6,12 +6,12 @@
     <string name="btn4Text">Button 4</string>
     <string name="btn5Text">Button 5</string>
     <string name="btn6Text">Button 6</string>
-    <string name="restaurantText">Restaurants page</string>
-    <string name="businessText">Businesses page</string>
+    <string name="restaurantText">Restaurants</string>
+    <string name="businessText">Businesses</string>
     <string name="hotelText">Hotels</string>
-    <string name="weatherText">Weather page</string>
-    <string name="movieText">Movies page</string>
-    <string name="parkingText">Parkings page</string>
+    <string name="weatherText">Weather</string>
+    <string name="movieText">Movies</string>
+    <string name="parkingText">Parkings</string>
     <string name="settingsText">App settings</string>
     <string name="hotelCategoriaText">"Categoria de l'hotel: "</string>
     <string-array name="hotelCategories">
@@ -30,12 +30,12 @@
     <string name="menuConfig1">Color de fons</string>
     <string name="menuConfig2">Mida de la lletra</string>
     <string name="menuConfig3">Color de la lletra</string>
-    
     <string-array name="restaurantCategories">
         <item>Italià</item>
         <item>Japonès</item>
         <item>Vegetarià</item>
         <item>Marisc</item>
-        <item>Hamburgueseria</item>
+        <item>Chambersburg</item>
     </string-array>
+    <string name="categoriesRestaurantsText">Categories de restaurants</string>
 </resources>
