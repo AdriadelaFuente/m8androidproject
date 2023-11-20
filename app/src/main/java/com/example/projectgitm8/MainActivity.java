@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,24 +16,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 btnWeather,
                 btnMovies,
                 btnParkings;
+    Button btnSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnRestaurants = (ImageButton)findViewById(R.id.restaurants);
+        btnRestaurants = findViewById(R.id.restaurants);
         btnRestaurants.setOnClickListener(this);
-        btnBusinesses = (ImageButton)findViewById(R.id.businesses);
+        btnBusinesses = findViewById(R.id.businesses);
         btnBusinesses.setOnClickListener(this);
-        btnHotels = (ImageButton)findViewById(R.id.hotels);
+        btnHotels = findViewById(R.id.hotels);
         btnHotels.setOnClickListener(this);
-        btnWeather = (ImageButton)findViewById(R.id.weather);
+        btnWeather = findViewById(R.id.weather);
         btnWeather.setOnClickListener(this);
-        btnMovies = (ImageButton)findViewById(R.id.movies);
+        btnMovies = findViewById(R.id.movies);
         btnMovies.setOnClickListener(this);
-        btnParkings = (ImageButton)findViewById(R.id.parkings);
+        btnParkings = findViewById(R.id.parkings);
         btnParkings.setOnClickListener(this);
+        btnSettings = findViewById(R.id.btnSettings);
+        btnSettings.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (v==btnWeather) intent = new Intent(this, Weather.class);
         else if (v==btnMovies) intent = new Intent(this, Movies.class);
         else if (v==btnParkings) intent = new Intent(this, Parkings.class);
+        else if (v==btnSettings) intent = new Intent(this, Configuracio.class);
         startActivity(intent);
     }
 }
