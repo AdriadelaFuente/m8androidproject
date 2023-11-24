@@ -39,7 +39,7 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="80dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,19 +55,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:layout_weight="1">
                 <TextView
                     android:id="@+id/tv1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:text="Text1"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="@color/black"
                     android:gravity="center_horizontal"
                     android:padding="20dp" />
-
+                <Button
+                    android:id="@+id/businessBtnTlf1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="telefon"/>
+                <Button
+                    android:id="@+id/businessAdress1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="maps"/>
+                <Button
+                    android:id="@+id/businessWeb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Accés Web"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,18 +105,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:layout_weight="1" >
                 <TextView
                     android:id="@+id/tv2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:text="Text2"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="@color/black"
                     android:gravity="center_horizontal"
                     android:padding="20dp"/>
+                <Button
+                    android:id="@+id/businessBtnTlf2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="telefon"/>
+                <Button
+                    android:id="@+id/businessAdress2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="maps"/>
+                <Button
+                    android:id="@+id/businessWeb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Accés Web"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,18 +155,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:layout_weight="1" >
                 <TextView
                     android:id="@+id/tv3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:text="Text3"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="15dp"
                     android:textColor="@color/black"
                     android:gravity="center_horizontal"
                     android:padding="20dp"/>
+                <Button
+                    android:id="@+id/businessBtnTlf3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="telefon"/>
+                <Button
+                    android:id="@+id/businessAdress3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="maps"/>
+                <Button
+                    android:id="@+id/businessWeb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Accés Web"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
