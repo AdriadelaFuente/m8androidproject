@@ -29,24 +29,14 @@ public class HotelDetail extends AppCompatActivity implements View.OnClickListen
         hotelName.setText(sacInformacio.getString("nom"));
         TextView hotelAddress = findViewById(R.id.hotelAddress);
         hotelAddress.setText(sacInformacio.getString("address"));
-        //TextView hotelWeb = findViewById(R.id.hotelWeb);
         webUrl = sacInformacio.getString("web");
-        //hotelWeb.setText(webUrl);
-        //TextView hotelPhone = findViewById(R.id.hotelPhone);
         phoneNum = sacInformacio.getString("telefon");
-        //hotelPhone.setText(phoneNum);
         int numImatge = sacInformacio.getInt("imatge");
         ImageView imatgeHotel = findViewById(R.id.imageHotel);
         imatgeHotel.setImageResource(numImatge);
 
         int categoria = sacInformacio.getInt("categoria");
         assignHotelStarsImage(categoria);
-
-//        String categoryText = String.valueOf(categoria);
-//        if (categoria==1) categoryText += " estrella";
-//        else categoryText += " estrelles";
-//        TextView hotelCategory = findViewById(R.id.hotelCategory);
-//        hotelCategory.setText(categoryText);
     }
 
     @Override
