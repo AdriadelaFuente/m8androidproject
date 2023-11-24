@@ -7,24 +7,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HotelDetail extends AppCompatActivity {
-
-    int[] lImatges = {
-            R.drawable.hotel,
-            R.drawable.hotel,
-            R.drawable.hotel,
-            R.drawable.business,
-            R.drawable.business,
-            R.drawable.business,
-            R.drawable.parking,
-            R.drawable.parking,
-            R.drawable.parking,
-            R.drawable.movie,
-            R.drawable.movie,
-            R.drawable.movie,
-            R.drawable.restaurant,
-            R.drawable.restaurant,
-            R.drawable.restaurant
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +25,7 @@ public class HotelDetail extends AppCompatActivity {
         int numImatge = sacInformacio.getInt("imatge");
         int categoria = sacInformacio.getInt("categoria");
         ImageView imatgeHotel = findViewById(R.id.imageHotel);
-        imatgeHotel.setImageResource(lImatges[numImatge]);
+        imatgeHotel.setImageResource(numImatge);
 
         String categoryText = String.valueOf(categoria);
         if (categoria==1) categoryText += " estrella";
