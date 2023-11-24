@@ -38,4 +38,9 @@
     <string name="phone_icon">Phone icon</string>
     <string name="hotel_phone">Hotel phone</string>
     <string name="valoracio_text">Hotel rating:</string>
+    <string-array name="spinner_array">
+        <item>Perruqueria</item>
+        <item>Taller</item>
+        <item>Botigues</item>
+    </string-array>
 </resources>
