@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjectGitM8</string>
+    <string name="app_name">Gran Centre</string>
     <string name="btn1Text">Button 1</string>
     <string name="btn2Text">Button 2</string>
     <string name="btn3Text">Button 3</string>
@@ -14,19 +14,6 @@
     <string name="parkingText">Parkings</string>
     <string name="settingsText">Settings</string>
     <string name="hotelCategoriaText">"Categoria de l'hotel: "</string>
-    <string-array name="hotelCategories">
-        <item>1 estrella</item>
-        <item>2 estrelles</item>
-        <item>3 estrelles</item>
-        <item>4 estrelles</item>
-        <item>5 estrelles</item>
-    </string-array>
-    <string-array name="hotelList">
-        <item>Hotel 1</item>
-        <item>Hotel 2</item>
-        <item>Hotel 3</item>
-        <item>Hotel 4</item>
-    </string-array>
     <string name="menuConfig1">Color de fons</string>
     <string name="menuConfig2">Mida de la lletra</string>
     <string name="menuConfig3">Color de la lletra</string>
