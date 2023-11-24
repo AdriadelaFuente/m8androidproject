@@ -25,8 +25,8 @@
         <item>Chambersburg</item>
     </string-array>
     <string name="categoriesRestaurantsText">Categories de restaurants</string>
-    <string name="hotel_item_name">Medium Text</string>
-    <string name="hotel_item_address">TextView</string>
+    <string name="hotel_item_name">Hotel name</string>
+    <string name="hotel_item_address">Hotel address</string>
     <string name="hotel_image_description">Hotel image</string>
     <string name="hotel_name">Hotel name</string>
     <string name="address_icon">Address icon</string>
@@ -37,5 +37,5 @@
     <string name="hotel_web">Hotel web</string>
     <string name="phone_icon">Phone icon</string>
     <string name="hotel_phone">Hotel phone</string>
-    <string name="valoracio_text">Valoració:</string>
+    <string name="valoracio_text">Hotel rating:</string>
 </resources>

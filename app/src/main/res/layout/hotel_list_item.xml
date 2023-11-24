@@ -8,9 +8,9 @@
         android:id="@+id/hotelImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/hotel"
+        android:src="@drawable/hotel_item"
         android:background="@color/black"
-        android:padding="5dp"
+        android:padding="10dp"
         android:contentDescription="@string/hotel_item_name" />
     <LinearLayout android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -12,113 +12,200 @@
         android:layout_height="match_parent"
         android:src="@drawable/hotel"
         android:background="@color/black"
-        android:layout_weight="1"
+        android:layout_weight="1.15"
         android:contentDescription="@string/hotel_image_description"
         android:scaleType="center"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_marginTop="5dp"
-        android:padding="17dp"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/nameHotel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hotel_name"
-            android:textSize="20sp"/>
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginVertical="7dp"
-            tools:ignore="UseCompoundDrawables">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/location"
-                android:layout_marginEnd="5dp"
-                android:contentDescription="@string/address_icon" />
-            <TextView
-                android:id="@+id/hotelAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hotel_address"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="7dp"
-            tools:ignore="UseCompoundDrawables">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/category"
-                android:layout_marginEnd="5dp"
-                android:contentDescription="@string/category_icon" />
-            <TextView
-                android:id="@+id/hotelCategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hotel_category"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/webLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="7dp"
-            tools:ignore="UseCompoundDrawables">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/link"
-                android:layout_marginEnd="5dp"
-                android:contentDescription="@string/link_icon"/>
-            <TextView
-                android:id="@+id/hotelWeb"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hotel_web"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/phoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="7dp"
-            tools:ignore="UseCompoundDrawables">
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/phone"
-                android:layout_marginEnd="5dp"
-                android:contentDescription="@string/phone_icon"/>
-            <TextView
-                android:id="@+id/hotelPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/hotel_phone"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginVertical="3dp"
-            android:gravity="center">
-            <TextView
+            android:gravity="left|center_vertical"
+            tools:ignore="RtlHardcoded">
+            <LinearLayout
+                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="left|center_vertical">
+                <TextView
+                    android:id="@+id/nameHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hotel_item_name"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+                <TextView
+                    android:id="@+id/hotelAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hotel_address"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/hotelStars"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/stars_1"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/category_icon" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="22dp">
+            <ImageView
+                android:background="@drawable/hotel_card"
+                android:padding="10dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/web"
+                android:id="@+id/webLink"
+                android:contentDescription="@string/link_icon" />
+            <ImageView
+                android:background="@drawable/hotel_card"
+                android:padding="10dp"
+                android:layout_marginHorizontal="35dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/phone"
+                android:id="@+id/phoneNumber"
+                android:contentDescription="@string/phone_icon" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
                 android:text="@string/valoracio_text"
-                android:layout_weight="3"/>
+                android:layout_weight="3"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
             <RatingBar
                 android:id="@+id/hotelRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:numStars="5"
-                />
+                android:numStars="5"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:paddingVertical="10dp"-->
+<!--        android:paddingHorizontal="15dp"-->
+<!--        android:orientation="vertical">-->
+<!--        <TextView-->
+<!--            android:id="@+id/nameHotel"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="@string/hotel_name"-->
+<!--            android:textSize="25sp"/>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginVertical="7dp"-->
+<!--            tools:ignore="UseCompoundDrawables">-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/location"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:contentDescription="@string/address_icon" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/hotelAddress"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/hotel_address"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginVertical="7dp"-->
+<!--            tools:ignore="UseCompoundDrawables">-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/category"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:contentDescription="@string/category_icon" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/hotelCategory"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/hotel_category"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/webLink"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginVertical="7dp"-->
+<!--            tools:ignore="UseCompoundDrawables">-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/link"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:contentDescription="@string/link_icon"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/hotelWeb"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/hotel_web"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/phoneNumber"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginVertical="7dp"-->
+<!--            tools:ignore="UseCompoundDrawables">-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@drawable/phone"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:contentDescription="@string/phone_icon"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/hotelPhone"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/hotel_phone"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginVertical="3dp"-->
+<!--            android:gravity="center">-->
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/valoracio_text"-->
+<!--                android:layout_weight="3"/>-->
+<!--            <RatingBar-->
+<!--                android:id="@+id/hotelRatingBar"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:numStars="5"/>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+<!-- </LinearLayout> -->

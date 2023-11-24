@@ -15,7 +15,6 @@ public class HotelAdapter extends ArrayAdapter<Hotel> {
     private final Hotel[] lHotels;
     public HotelAdapter(Activity context, Hotel[] lHotels) {
         super(context, R.layout.hotel_list_item, lHotels);
-
         this.context = context;
         this.lHotels = lHotels;
     }
@@ -27,7 +26,6 @@ public class HotelAdapter extends ArrayAdapter<Hotel> {
 
         TextView titleText = rowView.findViewById(R.id.hotelName);
         TextView subtitleText = rowView.findViewById(R.id.hotelAddress);
-
         titleText.setText(lHotels[position].getNom());
         subtitleText.setText(lHotels[position].getAdreca());
 
