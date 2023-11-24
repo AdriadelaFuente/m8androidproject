@@ -65,6 +65,7 @@
                 android:text="@string/hotel_category"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/webLink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -83,6 +84,7 @@
                 android:text="@string/hotel_web"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/phoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
