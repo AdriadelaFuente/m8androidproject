@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Hotels"
     android:orientation="vertical"
     android:id="@+id/parkingsLayout">
@@ -34,153 +35,209 @@
                 android:contentDescription="@string/parkingText"/>
         </LinearLayout>
     </Toolbar>
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:rowCount="3"
+        android:columnCount="1"
+        android:padding="20dp">
         <androidx.cardview.widget.CardView
             android:id="@+id/parking1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="12dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:gravity="center">
                 <TextView
+                    android:id="@+id/parking1Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aparcament Municipal Gratuït"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textSize="17sp"/>
+                    android:text="@string/parking_1_name"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/total"
+                        android:contentDescription="@string/total_places_icon" />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/parking1TotalPlaces"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Places totals: 271"
-                        android:layout_weight="1"/>
+                        android:text="@string/parking_1_total_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/available"
+                        android:contentDescription="@string/available_places_icon" />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/parking1AvailablePlaces"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Places disponibles: 29"
-                        android:textAlignment="textEnd"
-                        android:layout_weight="1"/>
+                        android:text="@string/parking_1_available_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/parking2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="12dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:gravity="center">
                 <TextView
+                    android:id="@+id/parking2Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Parking Hospital de Granollers"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textSize="17sp"/>
+                    android:text="@string/parking_2_name"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/total"
+                        android:contentDescription="@string/available_places_icon" />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/parking2TotalPlaces"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Places totals: 159"
-                        android:layout_weight="1"/>
+                        android:text="@string/parking_2_total_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/available"
+                        android:contentDescription="@string/available_places_icon" />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/parking2AvailablePlaces"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Places disponibles: 3"
-                        android:textAlignment="textEnd"
-                        android:layout_weight="1"/>
+                        android:text="@string/parking_2_available_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/parking3"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center_vertical"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="12dp">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:orientation="vertical"
-                android:padding="10dp">
+                android:gravity="center">
                 <TextView
+                    android:id="@+id/parking3Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Aparcamiento Can Comas"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:textSize="17sp"/>
+                    android:text="@string/parking_3_name"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Places totals: 83"
-                        android:layout_weight="1"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Places disponibles: 52"
-                        android:textAlignment="textEnd"
-                        android:layout_weight="1"/>
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/parking4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Parking Munta"
                     android:gravity="center"
-                    android:layout_weight="1"
-                    android:textSize="17sp"/>
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/total"
+                        android:contentDescription="@string/available_places_icon" />
+                    <TextView
+                        android:id="@+id/parking3TotalPlaces"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parking_3_total_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:gravity="center"
+                    tools:ignore="UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/available"
+                        android:contentDescription="@string/available_places_icon" />
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/parking3AvailablePlaces"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Places totals: 50"
-                        android:layout_weight="1"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Places disponibles: 32"
-                        android:textAlignment="textEnd"
-                        android:layout_weight="1"/>
+                        android:text="@string/parking_3_available_places"
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="10dp"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </LinearLayout>
+    </GridLayout>
 </LinearLayout>
