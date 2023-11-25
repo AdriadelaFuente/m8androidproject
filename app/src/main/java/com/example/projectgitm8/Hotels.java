@@ -116,14 +116,7 @@ class Hotel {
     private final int numImatge;
     private final int categoria;
 
-    public Hotel(
-            String nom,
-            String adreca,
-            String web,
-            String telefon,
-            int numImatge,
-            int categoria
-    ) {
+    public Hotel(String nom, String adreca, String web, String telefon, int numImatge, int categoria) {
         this.nom = nom;
         this.adreca = adreca;
         this.web = web;
