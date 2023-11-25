@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectGitM8"
         tools:targetApi="31">
+        
+        <!-- {MAP_API_KEY} és la API_KEY per utilitzar Google Maps al detall dels Parkings.
+        El seu valor es troba a local.properties (dins la carpeta Gradle Scripts) -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAP_API_KEY}" />
+        <activity
+            android:name=".ParkingDetail"
+            android:exported="false"
+            android:label="@string/title_activity_parking_detail" />
         <activity
             android:name=".HotelDetail"
             android:exported="false" />
