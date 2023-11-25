@@ -3,7 +3,9 @@ package com.example.projectgitm8;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,6 +24,7 @@ public class Businesses extends AppCompatActivity {
     TextView tv1, tv2, tv3;
     ImageView iv1, iv2, iv3;
     Button btnTlf1, btnTlf2, btnTlf3;
+    Button btnAdress1, btnAdress2, btnAdress3;
     Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class Businesses extends AppCompatActivity {
         btnTlf1 = findViewById(R.id.businessBtnTlf1);
         btnTlf2 = findViewById(R.id.businessBtnTlf2);
         btnTlf3 = findViewById(R.id.businessBtnTlf3);
+        btnAdress1 = findViewById(R.id.businessAdress1);
+        btnAdress2 = findViewById(R.id.businessAdress2);
+        btnAdress3 = findViewById(R.id.businessAdress3);
 
         spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -60,6 +66,63 @@ public class Businesses extends AppCompatActivity {
                 tv3.setText("CAROL BRUGUERA");
             }
         });
+
+
+
+
+
+        btnAdress1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String location = "";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                if (spinner.getSelectedItem().equals("Perruqueria")) {
+                    location = getString(R.string.businessAdressPerruqueria1);
+                } else if (spinner.getSelectedItem().equals("Taller")) {
+                    location = getString(R.string.businessAdressTaller1);
+                } else if (spinner.getSelectedItem().equals("Botigues")) {
+                    location = getString(R.string.businessAdressBotiga1);
+                }
+                intent.setData(Uri.parse("geo:0,0?q=" + location));
+                Intent chooser = Intent.createChooser(intent, "Launch Maps");
+                startActivity(chooser);
+            }
+        });
+        btnAdress2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String location = "";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                if (spinner.getSelectedItem().equals("Perruqueria")) {
+                    location = getString(R.string.businessAdressPerruqueria2);
+                } else if (spinner.getSelectedItem().equals("Taller")) {
+                    location = getString(R.string.businessAdressTaller2);
+                } else if (spinner.getSelectedItem().equals("Botigues")) {
+                    location = getString(R.string.businessAdressBotiga2);
+                }
+                intent.setData(Uri.parse("geo:0,0?q=" + location));
+                Intent chooser = Intent.createChooser(intent, "Launch Maps");
+                startActivity(chooser);
+            }
+        });
+        btnAdress1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String location = "";
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                if (spinner.getSelectedItem().equals("Perruqueria")) {
+                    location = getString(R.string.businessAdressPerruqueria3);
+                } else if (spinner.getSelectedItem().equals("Taller")) {
+                    location = getString(R.string.businessAdressTaller3);
+                } else if (spinner.getSelectedItem().equals("Botigues")) {
+                    location = getString(R.string.businessAdressBotiga3);
+                }
+                intent.setData(Uri.parse("geo:0,0?q=" + location));
+                Intent chooser = Intent.createChooser(intent, "Launch Maps");
+                startActivity(chooser);
+            }
+        });
+
     }
 
     public void setContentBusiness() {

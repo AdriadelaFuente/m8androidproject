@@ -43,4 +43,13 @@
         <item>Taller</item>
         <item>Botigues</item>
     </string-array>
+    <string name="businessAdressPerruqueria1">23-25, Carrer de Corró, 08401 Granollers, Barcelona</string>
+    <string name="businessAdressPerruqueria2">Carrer de Josep Torras I Bages, 35, 08401 Granollers, Barcelona</string>
+    <string name="businessAdressPerruqueria3">Plaça Lluís Perpinyà, 4, 08400 Granollers, Barcelona</string>
+    <string name="businessAdressTaller1">carrer del Mestre Josep M. Ruera, 25, 08401 Granollers, Barcelona</string>
+    <string name="businessAdressTaller2">Plaça Porxada,19, 08401, Ganollers, Barcelona</string>
+    <string name="businessAdressTaller3">Plaça Onze de Setembre, 13, 1r pis 08402 Granollers, Barcelona</string>
+    <string name="businessAdressBotiga1">Ctra. Vallderiolf, S/N, 08430 Barcelona</string>
+    <string name="businessAdressBotiga2">Carrer Catalunya, 39, 08520 Llerona, Barcelona</string>
+    <string name="businessAdressBotiga3">Carrer de Foment, 29, 08400 Granollers, Barcelona</string>
 </resources>
