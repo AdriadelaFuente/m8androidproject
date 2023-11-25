@@ -43,4 +43,16 @@
         <item>Taller</item>
         <item>Botigues</item>
     </string-array>
+    <string name="title_activity_parking_detail">ParkingDetail</string>
+    <string name="parking_1_name">Parking 1</string>
+    <string name="parking_1_total_places">Parking 1 total places</string>
+    <string name="parking_1_available_places">Parking 1 available places</string>
+    <string name="parking_2_name">Parking 2</string>
+    <string name="parking_2_total_places">Parking 2 total places</string>
+    <string name="parking_2_available_places">Parking 2 available places</string>
+    <string name="parking_3_name">Parking 3</string>
+    <string name="parking_3_total_places">Parking 3 total places</string>
+    <string name="parking_3_available_places">Parking 3 available places</string>
+    <string name="total_places_icon">total_places_icon</string>
+    <string name="available_places_icon">available_places_icon</string>
 </resources>
