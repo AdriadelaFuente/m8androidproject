@@ -43,8 +43,7 @@
         <item>Taller</item>
         <item>Botigues</item>
     </string-array>
-<<<<<<< HEAD
-    <string name="businessAdressPerruqueria1">23-25, Carrer de Corró, 08401 Granollers, Barcelona</string>
+    <string name="businessAdressPerruqueria1">23–25, Carrer de Corró, 08401 Granollers, Barcelona</string>
     <string name="businessAdressPerruqueria2">Carrer de Josep Torras I Bages, 35, 08401 Granollers, Barcelona</string>
     <string name="businessAdressPerruqueria3">Plaça Lluís Perpinyà, 4, 08400 Granollers, Barcelona</string>
     <string name="businessAdressTaller1">carrer del Mestre Josep M. Ruera, 25, 08401 Granollers, Barcelona</string>
@@ -53,7 +52,6 @@
     <string name="businessAdressBotiga1">Ctra. Vallderiolf, S/N, 08430 Barcelona</string>
     <string name="businessAdressBotiga2">Carrer Catalunya, 39, 08520 Llerona, Barcelona</string>
     <string name="businessAdressBotiga3">Carrer de Foment, 29, 08400 Granollers, Barcelona</string>
-=======
     <string name="title_activity_parking_detail">ParkingDetail</string>
     <string name="parking_1_name">Parking 1</string>
     <string name="parking_1_total_places">Parking 1 total places</string>
@@ -66,5 +64,4 @@
     <string name="parking_3_available_places">Parking 3 available places</string>
     <string name="total_places_icon">total_places_icon</string>
     <string name="available_places_icon">available_places_icon</string>
->>>>>>> b12e9a00d92b056230de076b801cbb12f9597234
 </resources>
