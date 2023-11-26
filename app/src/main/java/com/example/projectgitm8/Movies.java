@@ -7,11 +7,17 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
+import java.util.ArrayList;
 
 public class Movies extends AppCompatActivity {
 
@@ -22,6 +28,11 @@ public class Movies extends AppCompatActivity {
 
         EventBus.getDefault().register(this);
         loadInitialColor();
+    }
+
+    private void onItemClickFunction(String itemName) {
+        // Puedes hacer lo que quieras con el nombre del elemento, por ejemplo, mostrar un Toast
+        Toast.makeText(this, "Clic en: " + itemName, Toast.LENGTH_SHORT).show();
     }
 
     private void loadInitialColor() {
