@@ -1,23 +1,26 @@
 package com.example.projectgitm8;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Arrays;
-import java.util.List;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 public class Businesses extends AppCompatActivity {
 
@@ -59,6 +62,7 @@ public class Businesses extends AppCompatActivity {
                 setContentBusiness();
             }
 
+            @SuppressLint("SetTextI18n")
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
                 tv1.setText("BELLESA ESSENCIAL");
@@ -71,60 +75,73 @@ public class Businesses extends AppCompatActivity {
 
 
 
-        btnAdress1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String location = "";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                if (spinner.getSelectedItem().equals("Perruqueria")) {
-                    location = getString(R.string.businessAdressPerruqueria1);
-                } else if (spinner.getSelectedItem().equals("Taller")) {
-                    location = getString(R.string.businessAdressTaller1);
-                } else if (spinner.getSelectedItem().equals("Botigues")) {
-                    location = getString(R.string.businessAdressBotiga1);
-                }
-                intent.setData(Uri.parse("geo:0,0?q=" + location));
-                Intent chooser = Intent.createChooser(intent, "Launch Maps");
-                startActivity(chooser);
+        btnAdress1.setOnClickListener(v -> {
+            String location = "";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                location = getString(R.string.businessAdressPerruqueria1);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                location = getString(R.string.businessAdressTaller1);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                location = getString(R.string.businessAdressBotiga1);
             }
+            intent.setData(Uri.parse("geo:0,0?q=" + location));
+            Intent chooser = Intent.createChooser(intent, "Launch Maps");
+            startActivity(chooser);
         });
-        btnAdress2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String location = "";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                if (spinner.getSelectedItem().equals("Perruqueria")) {
-                    location = getString(R.string.businessAdressPerruqueria2);
-                } else if (spinner.getSelectedItem().equals("Taller")) {
-                    location = getString(R.string.businessAdressTaller2);
-                } else if (spinner.getSelectedItem().equals("Botigues")) {
-                    location = getString(R.string.businessAdressBotiga2);
-                }
-                intent.setData(Uri.parse("geo:0,0?q=" + location));
-                Intent chooser = Intent.createChooser(intent, "Launch Maps");
-                startActivity(chooser);
+        btnAdress2.setOnClickListener(v -> {
+            String location = "";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                location = getString(R.string.businessAdressPerruqueria2);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                location = getString(R.string.businessAdressTaller2);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                location = getString(R.string.businessAdressBotiga2);
             }
+            intent.setData(Uri.parse("geo:0,0?q=" + location));
+            Intent chooser = Intent.createChooser(intent, "Launch Maps");
+            startActivity(chooser);
         });
-        btnAdress1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String location = "";
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                if (spinner.getSelectedItem().equals("Perruqueria")) {
-                    location = getString(R.string.businessAdressPerruqueria3);
-                } else if (spinner.getSelectedItem().equals("Taller")) {
-                    location = getString(R.string.businessAdressTaller3);
-                } else if (spinner.getSelectedItem().equals("Botigues")) {
-                    location = getString(R.string.businessAdressBotiga3);
-                }
-                intent.setData(Uri.parse("geo:0,0?q=" + location));
-                Intent chooser = Intent.createChooser(intent, "Launch Maps");
-                startActivity(chooser);
+        btnAdress1.setOnClickListener(v -> {
+            String location = "";
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                location = getString(R.string.businessAdressPerruqueria3);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                location = getString(R.string.businessAdressTaller3);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                location = getString(R.string.businessAdressBotiga3);
             }
+            intent.setData(Uri.parse("geo:0,0?q=" + location));
+            Intent chooser = Intent.createChooser(intent, "Launch Maps");
+            startActivity(chooser);
         });
 
+        EventBus.getDefault().register(this);
+        loadInitialColor();
     }
 
+    private void loadInitialColor() {
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("app_settings", Context.MODE_PRIVATE);
+        LinearLayout linearLayout = findViewById(R.id.businessLayout);
+        linearLayout.setBackgroundColor(sharedPref.getInt("bgColor", Color.WHITE));
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onBackgroundColorChanged(BackgroundColorChangedEvent event) {
+        int newColor = event.getNewColor();
+        View layout = findViewById(R.id.mainLayout);
+        layout.setBackgroundColor(newColor);
+    }
+
+    @Override
+    protected void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
+    @SuppressLint("SetTextI18n")
     public void setContentBusiness() {
         if (spinner.getSelectedItem().equals("Perruqueria")) {
             tv1.setText("BELLESA ESSENCIAL");
@@ -153,6 +170,7 @@ public class Businesses extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void setTelefon() {
         if (spinner.getSelectedItem().equals("Perruqueria")) {
             btnTlf1.setText("938708807");

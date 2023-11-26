@@ -1,14 +1,22 @@
 package com.example.projectgitm8;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 
 public class Hotels extends AppCompatActivity {
@@ -57,10 +65,30 @@ public class Hotels extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
+
+        EventBus.getDefault().register(this);
+        loadInitialColor();
+    }
+
+    private void loadInitialColor() {
+        SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("app_settings", Context.MODE_PRIVATE);
+        LinearLayout linearLayout = findViewById(R.id.hotelLayout);
+        linearLayout.setBackgroundColor(sharedPref.getInt("bgColor", Color.WHITE));
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onBackgroundColorChanged(BackgroundColorChangedEvent event) {
+        int newColor = event.getNewColor();
+        View layout = findViewById(R.id.mainLayout);
+        layout.setBackgroundColor(newColor);
+    }
+
+    @Override
+    protected void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
     }
 
     private Hotel[] getHotels() {
