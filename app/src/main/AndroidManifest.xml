@@ -47,6 +47,12 @@
             android:name=".Restaurants"
             android:exported="false" />
         <activity
+            android:name=".RestaurantDetail"
+            android:exported="false" />
+        <activity
+            android:name=".RestaurantAdapter"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

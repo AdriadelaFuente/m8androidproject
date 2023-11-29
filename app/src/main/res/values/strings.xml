@@ -43,7 +43,7 @@
         <item>Taller</item>
         <item>Botigues</item>
     </string-array>
-    <string name="businessAdressPerruqueria1">23-25, Carrer de Corró, 08401 Granollers, Barcelona</string>
+    <string name="businessAdressPerruqueria1">23–25, Carrer de Corró, 08401 Granollers, Barcelona</string>
     <string name="businessAdressPerruqueria2">Carrer de Josep Torras I Bages, 35, 08401 Granollers, Barcelona</string>
     <string name="businessAdressPerruqueria3">Plaça Lluís Perpinyà, 4, 08400 Granollers, Barcelona</string>
     <string name="businessAdressTaller1">carrer del Mestre Josep M. Ruera, 25, 08401 Granollers, Barcelona</string>
@@ -64,4 +64,59 @@
     <string name="parking_3_available_places">Parking 3 available places</string>
     <string name="total_places_icon">total_places_icon</string>
     <string name="available_places_icon">available_places_icon</string>
+    <string-array name="restaurantList">
+        <item>Restaurant 1</item>
+        <item>Restaurant 2</item>
+        <item>Restaurant 3</item>
+        <item>Restaurant 4</item>
+    </string-array>
+
+
+    <string name="restaurant_item_name">Medium Text</string>
+    <string name="restaurant_item_address">TextView</string>
+    <string name="restaurant_image_description">Restaurant image</string>
+    <string name="restaurant_name">Restaurant name</string>
+    <string name="restaurant_address">Restaurant address</string>
+    <string name="restaurant_category">Restaurant category</string>
+    <string name="restaurant_web">Restaurant web</string>
+    <string name="restaurant_phone">Restaurant phone</string>
+    <string name="restaurant_valoracio">Restaurant rating:</string>
+
+
+    <string-array name="weatherList">
+        <item>Dilluns</item>
+        <item>Dimarts</item>
+        <item>Dimecres</item>
+        <item>Dijous</item>
+        <item>Divendres</item>
+        <item>Dissabte</item>
+        <item>Diumenge</item>
+    </string-array>
+
+
+    <string name="weather_item_name">Medium Text</string>
+    <string name="weather_item_address">TextView</string>
+    <string name="weather_image_description">Restaurant image</string>
+    <string name="weather_name">Restaurant name</string>
+    <string name="weather_address">Restaurant address</string>
+    <string name="weather_category">Restaurant category</string>
+    <string name="weather_web">Restaurant web</string>
+    <string name="weather_phone">Restaurant phone</string>
+    <string name="weather_valoracio">Restaurant rating:</string>
+    <string name="rain_icon">rainIcon</string>
+    <string name="dilluns">Dilluns</string>
+    <string name="_21_c">21ºC</string>
+    <string name="sun_icon">sunIcon</string>
+    <string name="dimarts">Dimarts</string>
+    <string name="_25_c">25ºC</string>
+    <string name="windicon">windIcon</string>
+    <string name="dimecres">Dimecres</string>
+    <string name="_19_c">19ºC</string>
+    <string name="stormicon">stormIcon</string>
+    <string name="dijous">Dijous</string>
+    <string name="divendres">Divendres</string>
+    <string name="_17_c">17ºC</string>
+    <string name="dissabte">Dissabte</string>
+    <string name="diumenge">Diumenge</string>
+    <string name="suncloudsicon">sunCloudsIcon</string>
 </resources>

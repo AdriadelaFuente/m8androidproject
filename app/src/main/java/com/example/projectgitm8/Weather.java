@@ -1,13 +1,12 @@
 package com.example.projectgitm8;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -26,7 +25,7 @@ public class Weather extends AppCompatActivity {
 
     private void loadInitialColor() {
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("app_settings", Context.MODE_PRIVATE);
-        LinearLayout linearLayout = findViewById(R.id.weatherLayout);
+        View linearLayout = findViewById(R.id.weaterLayout);
         linearLayout.setBackgroundColor(sharedPref.getInt("bgColor", Color.WHITE));
     }
 
