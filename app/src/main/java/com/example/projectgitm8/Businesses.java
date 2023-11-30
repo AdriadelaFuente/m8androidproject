@@ -28,6 +28,7 @@ public class Businesses extends AppCompatActivity {
     ImageView iv1, iv2, iv3;
     Button btnTlf1, btnTlf2, btnTlf3;
     Button btnAdress1, btnAdress2, btnAdress3;
+    Button btnWeb1, btnWeb2, btnWeb3;
     Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class Businesses extends AppCompatActivity {
         btnAdress1 = findViewById(R.id.businessAdress1);
         btnAdress2 = findViewById(R.id.businessAdress2);
         btnAdress3 = findViewById(R.id.businessAdress3);
+        btnWeb1 = findViewById(R.id.businessWeb1);
+        btnWeb2 = findViewById(R.id.businessWeb2);
+        btnWeb3 = findViewById(R.id.businessWeb3);
 
         spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -103,7 +107,7 @@ public class Businesses extends AppCompatActivity {
             Intent chooser = Intent.createChooser(intent, "Launch Maps");
             startActivity(chooser);
         });
-        btnAdress1.setOnClickListener(v -> {
+        btnAdress3.setOnClickListener(v -> {
             String location = "";
             Intent intent = new Intent(Intent.ACTION_VIEW);
             if (spinner.getSelectedItem().equals("Perruqueria")) {
@@ -117,6 +121,47 @@ public class Businesses extends AppCompatActivity {
             Intent chooser = Intent.createChooser(intent, "Launch Maps");
             startActivity(chooser);
         });
+
+        btnWeb1.setOnClickListener(v -> {
+            String url = "";
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                url = getString(R.string.webPerruqueria1);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                url = getString(R.string.webTaller1);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                url = getString(R.string.webBotiga1);
+            }
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        btnWeb2.setOnClickListener(v -> {
+            String url = "";
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                url = getString(R.string.webPerruqueria2);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                url = getString(R.string.webTaller2);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                url = getString(R.string.webBotiga2);
+            }
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+        btnWeb3.setOnClickListener(v -> {
+            String url = "";
+            if (spinner.getSelectedItem().equals("Perruqueria")) {
+                url = getString(R.string.webPerruqueria3);
+            } else if (spinner.getSelectedItem().equals("Taller")) {
+                url = getString(R.string.webTaller3);
+            } else if (spinner.getSelectedItem().equals("Botigues")) {
+                url = getString(R.string.webBotiga3);
+            }
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+        });
+
+
 
         EventBus.getDefault().register(this);
         loadInitialColor();
@@ -155,8 +200,8 @@ public class Businesses extends AppCompatActivity {
             tv1.setText("AUTORAPID MACOA");
             tv2.setText("EUTRASA-PEUGEOT");
             tv3.setText("PNEUMATICS TONICO");
-            iv1.setImageResource(R.drawable.businesseutrasa);
-            iv2.setImageResource(R.drawable.businessautorapid);
+            iv1.setImageResource(R.drawable.businessautorapid);
+            iv2.setImageResource(R.drawable.businesseutrasa);
             iv3.setImageResource(R.drawable.businesstonico);
             setTelefon();
         } else if (spinner.getSelectedItem().equals("Botigues")) {

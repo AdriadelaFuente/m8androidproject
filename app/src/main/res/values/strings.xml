@@ -119,4 +119,15 @@
     <string name="dissabte">Dissabte</string>
     <string name="diumenge">Diumenge</string>
     <string name="suncloudsicon">sunCloudsIcon</string>
+
+    <string name="webPerruqueria1">https://www.bellesaessencial.com/</string>
+    <string name="webPerruqueria2">https://www.facebook.com/carmenmerino72/</string>
+    <string name="webPerruqueria3">https://carolbruguera.com/</string>
+    <string name="webTaller1">https://redoficial.citroen.es/roca-del-valles</string>
+    <string name="webTaller2">https://www.eutrasa.com/</string>
+    <string name="webTaller3">http://tonico.cat/</string>
+    <string name="webBotiga1">https://estabanell.com/particulars/telecomunicacions/</string>
+    <string name="webBotiga2">https://www.finetwork.com/</string>
+    <string name="webBotiga3">https://seo.barcelona/</string>
+
 </resources>
