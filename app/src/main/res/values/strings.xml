@@ -24,6 +24,15 @@
         <item>Marisc</item>
         <item>Chambersburg</item>
     </string-array>
+    <string name="perruqueria1">BELLESA ESSENCIAL</string>
+    <string name="perruqueria2">CARME ESTILISTES</string>
+    <string name="perruqueria3">CAROL BRUGUERA</string>
+    <string name="taller1">AUTORAPID MACOA</string>
+    <string name="taller2">EUTRASA-PEUGEOT</string>
+    <string name="taller3">PNEUMATICS TONICO</string>
+    <string name="botiga1">EMAGINA</string>
+    <string name="botiga2">FINETWORK GRANOLLERS</string>
+    <string name="botiga3">SEO.BARCELONA</string>
     <string name="categoriesRestaurantsText">Categories de restaurants</string>
     <string name="hotel_item_name">Hotel name</string>
     <string name="hotel_item_address">Hotel address</string>
@@ -183,5 +192,20 @@
         <item>15:00 / 18:00</item>
         <item>18:00 / 22:00</item>
         <item>18:00 / 22:00</item>
+    </string-array>
+    <string-array name="phonePerruqueria">
+        <item>938708807</item>
+        <item>938706497</item>
+        <item>938794016</item>
+    </string-array>
+    <string-array name="phoneTaller">
+        <item>938790296</item>
+        <item>938494100</item>
+        <item>938793553</item>
+    </string-array>
+    <string-array name="phoneBotiga">
+        <item>900828181</item>
+        <item>938708807</item>
+        <item>931303108</item>
     </string-array>
 </resources>

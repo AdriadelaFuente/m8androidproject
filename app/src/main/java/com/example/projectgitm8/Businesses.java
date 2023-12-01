@@ -22,7 +22,7 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-public class Businesses extends AppCompatActivity {
+public class Businesses extends AppCompatActivity implements View.OnClickListener {
 
     TextView tv1, tv2, tv3;
     ImageView iv1, iv2, iv3;
@@ -48,6 +48,9 @@ public class Businesses extends AppCompatActivity {
         btnTlf1 = findViewById(R.id.businessBtnTlf1);
         btnTlf2 = findViewById(R.id.businessBtnTlf2);
         btnTlf3 = findViewById(R.id.businessBtnTlf3);
+        btnTlf1.setOnClickListener(this);
+        btnTlf2.setOnClickListener(this);
+        btnTlf3.setOnClickListener(this);
         btnAdress1 = findViewById(R.id.businessAdress1);
         btnAdress2 = findViewById(R.id.businessAdress2);
         btnAdress3 = findViewById(R.id.businessAdress3);
@@ -171,6 +174,12 @@ public class Businesses extends AppCompatActivity {
         loadInitialColor();
     }
 
+    @Override
+    public void onClick(View v) {
+        // intent = new Intent(Intent.ACTION_DIAL);
+        // intent.setData(Uri.parse("tel:" + phoneWomen));
+    }
+
     private void loadInitialColor() {
         SharedPreferences sharedPref = getApplicationContext().getSharedPreferences("app_settings", Context.MODE_PRIVATE);
         LinearLayout linearLayout = findViewById(R.id.businessLayout);
@@ -194,9 +203,9 @@ public class Businesses extends AppCompatActivity {
     public void setContentBusiness() {
         if (spinner.getSelectedItem().equals("Perruqueria")) {
             netejaImatges();
-            tv1.setText("BELLESA ESSENCIAL");
-            tv2.setText("CARME ESTILISTES");
-            tv3.setText("CAROL BRUGUERA");
+            tv1.setText(getResources().getString(R.string.perruqueria1));
+            tv2.setText(getResources().getString(R.string.perruqueria2));
+            tv3.setText(getResources().getString(R.string.perruqueria3));
             iv1.setImageResource(R.drawable.buinessbellesaa);
             iv2.setImageResource(R.drawable.businesscarme);
             iv3.setImageResource(R.drawable.businesscarol);
@@ -210,9 +219,9 @@ public class Businesses extends AppCompatActivity {
             setTelefon();
         } else if (spinner.getSelectedItem().equals("Taller")) {
             netejaImatges();
-            tv1.setText("AUTORAPID MACOA");
-            tv2.setText("EUTRASA-PEUGEOT");
-            tv3.setText("PNEUMATICS TONICO");
+            tv1.setText(getResources().getString(R.string.taller1));
+            tv2.setText(getResources().getString(R.string.taller2));
+            tv3.setText(getResources().getString(R.string.taller3));
             iv1.setImageResource(R.drawable.businessautorapid);
             iv2.setImageResource(R.drawable.businesseutrasa);
             iv3.setImageResource(R.drawable.businesstonico);
@@ -226,9 +235,9 @@ public class Businesses extends AppCompatActivity {
             setTelefon();
         } else if (spinner.getSelectedItem().equals("Botigues")) {
             netejaImatges();
-            tv1.setText("EMAGINA");
-            tv2.setText("FINETWORK GRANOLLERS");
-            tv3.setText("SEO.BARCELONA");
+            tv1.setText(getResources().getString(R.string.botiga1));
+            tv2.setText(getResources().getString(R.string.botiga2));
+            tv3.setText(getResources().getString(R.string.botiga3));
             iv1.setImageResource(R.drawable.businessenigma);
             iv2.setImageResource(R.drawable.businessfinetwork);
             iv3.setImageResource(R.drawable.businesssesobarcelona);
@@ -261,7 +270,7 @@ public class Businesses extends AppCompatActivity {
             btnTlf3.setText("938793553");
         } else if (spinner.getSelectedItem().equals("Botigues")) {
             btnTlf1.setText("900828181");
-            btnTlf2.setText("615260127");
+            btnTlf2.setText("938708807");
             btnTlf3.setText("931303108/ 695486554");
         }
     }
