@@ -129,5 +129,59 @@
     <string name="webBotiga1">https://estabanell.com/particulars/telecomunicacions/</string>
     <string name="webBotiga2">https://www.finetwork.com/</string>
     <string name="webBotiga3">https://seo.barcelona/</string>
+    <string name="wcp1">true</string>
+    <string name="wcp2">true</string>
+    <string name="wcp3">false</string>
+    <string name="wct1">true</string>
+    <string name="wct2">false</string>
+    <string name="wct3">true</string>
+    <string name="wcb1">false</string>
+    <string name="wcb2">false</string>
+    <string name="wcb3">true</string>
 
+    <string-array name="horarisFnaf">
+        <item>19:00 / 23:00</item>
+        <item>18:00 / 21:00</item>
+        <item>18:00 / 21:00</item>
+        <item>16:00 / 21:00</item>
+        <item>15:00 / 18:00</item>
+        <item>18:00 / 22:00</item>
+        <item>18:00 / 22:00</item>
+    </string-array>
+    <string-array name="horarisJuegos">
+        <item>19:00 / 23:00</item>
+        <item>18:00 / 21:00</item>
+        <item>18:00 / 21:00</item>
+        <item>16:00 / 21:00</item>
+        <item>15:00 / 18:00</item>
+        <item>18:00 / 22:00</item>
+        <item>18:00 / 22:00</item>
+    </string-array>
+    <string-array name="horarisHypnotic">
+        <item>19:00 / 23:00</item>
+        <item>18:00 / 21:00</item>
+        <item>18:00 / 21:00</item>
+        <item>16:00 / 21:00</item>
+        <item>15:00 / 18:00</item>
+        <item>18:00 / 22:00</item>
+        <item>18:00 / 22:00</item>
+    </string-array>
+    <string-array name="horarisMarvel">
+        <item>19:00 / 23:00</item>
+        <item>18:00 / 21:00</item>
+        <item>18:00 / 21:00</item>
+        <item>16:00 / 21:00</item>
+        <item>15:00 / 18:00</item>
+        <item>18:00 / 22:00</item>
+        <item>18:00 / 22:00</item>
+    </string-array>
+    <string-array name="horarisPatrulla">
+        <item>19:00 / 23:00</item>
+        <item>18:00 / 21:00</item>
+        <item>18:00 / 21:00</item>
+        <item>16:00 / 21:00</item>
+        <item>15:00 / 18:00</item>
+        <item>18:00 / 22:00</item>
+        <item>18:00 / 22:00</item>
+    </string-array>
 </resources>

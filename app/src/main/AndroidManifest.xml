@@ -32,6 +32,9 @@
             android:name=".Parkings"
             android:exported="false" />
         <activity
+            android:name=".HorariMovie"
+            android:exported="false"/>
+        <activity
             android:name=".Movies"
             android:exported="false" />
         <activity

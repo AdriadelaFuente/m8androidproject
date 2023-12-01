@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Hotels"
+    tools:context=".Businesses"
     android:id="@+id/businessLayout">
 
     <Toolbar
@@ -114,6 +114,10 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wc1"></ImageView>
                 </LinearLayout>
             </LinearLayout>
 
@@ -178,6 +182,10 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:layout_weight="1"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wc2"></ImageView>
                 </LinearLayout>
             </LinearLayout>
 
@@ -242,6 +250,10 @@
                         android:layout_height="100dp"
                         android:layout_gravity="center"
                         android:layout_weight="1" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/wc3"></ImageView>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

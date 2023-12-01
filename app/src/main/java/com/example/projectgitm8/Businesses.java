@@ -26,6 +26,7 @@ public class Businesses extends AppCompatActivity {
 
     TextView tv1, tv2, tv3;
     ImageView iv1, iv2, iv3;
+    ImageView ivwc1, ivwc2, ivwc3;
     Button btnTlf1, btnTlf2, btnTlf3;
     Button btnAdress1, btnAdress2, btnAdress3;
     Button btnWeb1, btnWeb2, btnWeb3;
@@ -41,6 +42,9 @@ public class Businesses extends AppCompatActivity {
         iv1 = findViewById(R.id.businessImg1);
         iv2 = findViewById(R.id.businessImg2);
         iv3 = findViewById(R.id.businessImg3);
+        ivwc1 = findViewById(R.id.wc1);
+        ivwc2 = findViewById(R.id.wc2);
+        ivwc3 = findViewById(R.id.wc3);
         btnTlf1 = findViewById(R.id.businessBtnTlf1);
         btnTlf2 = findViewById(R.id.businessBtnTlf2);
         btnTlf3 = findViewById(R.id.businessBtnTlf3);
@@ -189,30 +193,60 @@ public class Businesses extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void setContentBusiness() {
         if (spinner.getSelectedItem().equals("Perruqueria")) {
+            netejaImatges();
             tv1.setText("BELLESA ESSENCIAL");
             tv2.setText("CARME ESTILISTES");
             tv3.setText("CAROL BRUGUERA");
             iv1.setImageResource(R.drawable.buinessbellesaa);
             iv2.setImageResource(R.drawable.businesscarme);
             iv3.setImageResource(R.drawable.businesscarol);
+            if (getString(R.string.wcp1).equals("true")) {
+                ivwc1.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wcp2).equals("true")) {
+                ivwc2.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wcp3).equals("true")) {
+                ivwc3.setImageResource(R.drawable.wheelchair);
+            }
             setTelefon();
         } else if (spinner.getSelectedItem().equals("Taller")) {
+            netejaImatges();
             tv1.setText("AUTORAPID MACOA");
             tv2.setText("EUTRASA-PEUGEOT");
             tv3.setText("PNEUMATICS TONICO");
             iv1.setImageResource(R.drawable.businessautorapid);
             iv2.setImageResource(R.drawable.businesseutrasa);
             iv3.setImageResource(R.drawable.businesstonico);
+            if (getString(R.string.wct1).equals("true")) {
+                ivwc1.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wct2).equals("true")) {
+                ivwc2.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wct3).equals("true")) {
+                ivwc3.setImageResource(R.drawable.wheelchair);
+            }
             setTelefon();
         } else if (spinner.getSelectedItem().equals("Botigues")) {
+            netejaImatges();
             tv1.setText("EMAGINA");
             tv2.setText("FINETWORK GRANOLLERS");
             tv3.setText("SEO.BARCELONA");
             iv1.setImageResource(R.drawable.businessenigma);
             iv2.setImageResource(R.drawable.businessfinetwork);
             iv3.setImageResource(R.drawable.businesssesobarcelona);
+            if (getString(R.string.wcb1).equals("true")) {
+                ivwc1.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wcb2).equals("true")) {
+                ivwc2.setImageResource(R.drawable.wheelchair);
+            } else if (getString(R.string.wcb3).equals("true")) {
+                ivwc3.setImageResource(R.drawable.wheelchair);
+            }
             setTelefon();
         }
+    }
+
+    public void netejaImatges() {
+        ivwc1.setImageResource(0);
+        ivwc2.setImageResource(0);
+        ivwc3.setImageResource(0);
     }
 
     @SuppressLint("SetTextI18n")
