@@ -176,8 +176,34 @@ public class Businesses extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        // intent = new Intent(Intent.ACTION_DIAL);
-        // intent.setData(Uri.parse("tel:" + phoneWomen));
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        if (spinner.getSelectedItem().equals("Perruqueria")) {
+            if (v == btnTlf1) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phonePerruqueria)[0]));
+            } else if (v == btnTlf2) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phonePerruqueria)[1]));
+            } else if (v == btnTlf3) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phonePerruqueria)[2]));
+            }
+        } else if (spinner.getSelectedItem().equals("Taller")) {
+            if (v == btnTlf1) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneTaller)[0]));
+            } else if (v == btnTlf2) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneTaller)[1]));
+            } else if (v == btnTlf3) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneTaller)[2]));
+            }
+        } else if (spinner.getSelectedItem().equals("Botigues")) {
+            if (v == btnTlf1) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneBotiga)[0]));
+            } else if (v == btnTlf2) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneBotiga)[1]));
+            } else if (v == btnTlf3) {
+                intent.setData(Uri.parse("tel:" + getResources().getStringArray(R.array.phoneBotiga)[2]));
+            }
+        }
+
+        startActivity(intent);
     }
 
     private void loadInitialColor() {
@@ -261,17 +287,17 @@ public class Businesses extends AppCompatActivity implements View.OnClickListene
     @SuppressLint("SetTextI18n")
     public void setTelefon() {
         if (spinner.getSelectedItem().equals("Perruqueria")) {
-            btnTlf1.setText("938708807");
-            btnTlf2.setText("938706497");
-            btnTlf3.setText("938794016");
+            btnTlf1.setText(getResources().getStringArray(R.array.phonePerruqueria)[0].toString());
+            btnTlf2.setText(getResources().getStringArray(R.array.phonePerruqueria)[1].toString());
+            btnTlf3.setText(getResources().getStringArray(R.array.phonePerruqueria)[2].toString());
         } else if (spinner.getSelectedItem().equals("Taller")) {
-            btnTlf1.setText("938790296");
-            btnTlf2.setText("938494100");
-            btnTlf3.setText("938793553");
+            btnTlf1.setText(getResources().getStringArray(R.array.phoneTaller)[0].toString());
+            btnTlf2.setText(getResources().getStringArray(R.array.phoneTaller)[1].toString());
+            btnTlf3.setText(getResources().getStringArray(R.array.phoneTaller)[2].toString());
         } else if (spinner.getSelectedItem().equals("Botigues")) {
-            btnTlf1.setText("900828181");
-            btnTlf2.setText("938708807");
-            btnTlf3.setText("931303108/ 695486554");
+            btnTlf1.setText(getResources().getStringArray(R.array.phoneBotiga)[0].toString());
+            btnTlf2.setText(getResources().getStringArray(R.array.phoneBotiga)[0].toString());
+            btnTlf3.setText(getResources().getStringArray(R.array.phoneBotiga)[0].toString());
         }
     }
 }
